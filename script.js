@@ -97,44 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => setLanguage('en'));
     });
 
-    // Background Music Logic
-    const bgMusic = document.getElementById('bg-music');
-    const musicToggle = document.getElementById('music-toggle');
-    const musicIcon = document.getElementById('music-icon');
-    let isMusicPlaying = false;
-
-    if (musicToggle && bgMusic) {
-        musicToggle.addEventListener('click', () => {
-            if (isMusicPlaying) {
-                bgMusic.pause();
-                musicIcon.textContent = 'music_off';
-                isMusicPlaying = false;
-            } else {
-                bgMusic.play();
-                musicIcon.textContent = 'volume_up';
-                isMusicPlaying = true;
-            }
-        });
-    }
-
-    // Try to play music when envelope is opened
-    const openBtn = document.getElementById('open-envelope-btn');
-    if (openBtn) {
-        openBtn.addEventListener('click', () => {
-            if (bgMusic && musicToggle) {
-                musicToggle.classList.remove('hidden');
-                bgMusic.play().then(() => {
-                    isMusicPlaying = true;
-                    musicIcon.textContent = 'volume_up';
-                }).catch((e) => {
-                    console.log("Autoplay prevented:", e);
-                    isMusicPlaying = false;
-                    musicIcon.textContent = 'music_off';
-                });
-            }
-        });
-    }
-
 });
     }, { 
         threshold: 0.1,
@@ -469,6 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => setLanguage('en'));
     });
 
+
     // Background Music Logic
     const bgMusic = document.getElementById('bg-music');
     const musicToggle = document.getElementById('music-toggle');
@@ -490,9 +453,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Try to play music when envelope is opened
-    const openBtn = document.getElementById('open-envelope-btn');
-    if (openBtn) {
-        openBtn.addEventListener('click', () => {
+    // Use the already defined openBtn if possible, or query it manually without redefining
+    const envelopeBtnForMusic = document.getElementById('open-envelope-btn');
+    if (envelopeBtnForMusic) {
+        envelopeBtnForMusic.addEventListener('click', () => {
             if (bgMusic && musicToggle) {
                 musicToggle.classList.remove('hidden');
                 bgMusic.play().then(() => {
