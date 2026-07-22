@@ -70,9 +70,13 @@ const translations = {
         "rsvp.retry": "Réessayer",
         "rsvp.success.title": "Merci pour votre réponse !",
         "rsvp.success.text": "Nous avons hâte de partager ce moment avec vous.",
-        "success.quote": '"Certains moments sont précieux... Merci de faire partie de notre histoire."',
+        "success.quote": "\"Certains moments sont précieux... Merci de faire partie de notre histoire.\"",
         "footer.love": "Avec amour, Raïssa & Yves",
-        "footer.copyright": "© 2026 RAÏVES. Signature of Elegance."
+        "footer.copyright": "© 2026 RAÏVES. Signature of Elegance.",
+        "hero.savethedate": "Save the Date",
+        "hero.officiel": "Officiel",
+        "hero.reservez": "Réservez cette date",
+        "story.il_etait": "Il était une fois deux prénoms..."
     },
     "en": {
         "nav.story": "Our Story",
@@ -145,8 +149,12 @@ const translations = {
         "rsvp.retry": "Try again",
         "rsvp.success.title": "Thank you for your response!",
         "rsvp.success.text": "We look forward to sharing this moment with you.",
-        "success.quote": '"Some moments are precious... Thank you for being part of our story."',
+        "success.quote": "\"Some moments are precious... Thank you for being part of our story.\"",
         "footer.love": "With love, Raïssa & Yves",
-        "footer.copyright": "© 2026 RAÏVES. Signature of Elegance."
+        "footer.copyright": "© 2026 RAÏVES. Signature of Elegance.",
+        "hero.savethedate": "Save the Date",
+        "hero.officiel": "Official",
+        "hero.reservez": "Save this date",
+        "story.il_etait": "Once upon a time, two names..."
     }
 };
