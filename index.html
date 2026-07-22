@@ -117,7 +117,7 @@
         
 
         <div id="intro-text-top" class="text-center mb-12 z-10 transition-opacity duration-500">
-            <p class="font-accent-calligraphy text-accent-calligraphy text-secondary opacity-90 drop-shadow-md text-3xl md:text-5xl">Une invitation vous attend !</p>
+            <p class="font-accent-calligraphy text-accent-calligraphy text-secondary opacity-90 drop-shadow-md text-3xl md:text-5xl"><span data-i18n="intro.wait">Une invitation vous attend !</span></p>
         </div>
         
         <!-- Envelope Container -->
@@ -159,7 +159,7 @@
             </div>
         </div>
 
-        <button id="open-envelope-btn" class="mt-12 px-8 py-3 bg-primary text-[#fdfbf7] rounded-full font-label-caps tracking-widest text-sm border-2 border-[#c09d55] shadow-lg hover:bg-secondary hover:scale-105 transition-all duration-300 z-20">Ouvrir l'enveloppe</button>
+        <button id="open-envelope-btn" class="mt-12 px-8 py-3 bg-primary text-[#fdfbf7] rounded-full font-label-caps tracking-widest text-sm border-2 border-[#c09d55] shadow-lg hover:bg-secondary hover:scale-105 transition-all duration-300 z-20"><span data-i18n="intro.openBtn">Ouvrir l'enveloppe</span></button>
 
         <!-- Confetti Canvas -->
         <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
@@ -174,11 +174,11 @@
                 <h1 class="font-display-lg-mobile text-headline-md text-primary tracking-widest">RAÏVES</h1>
             </div>
             <ul class="flex flex-row gap-6 items-center" id="desktop-nav-list">
-                <li><a href="#home" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Accueil</a></li>
-                <li><a href="#story" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Histoire</a></li>
-                <li><a href="#timeline" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Programme</a></li>
-                <li><a href="#dresscode" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Dress Code</a></li>
-                <li><a href="#gallery" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Galerie</a></li>
+                <li><a href="#home" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold"><span data-i18n="nav.home">Accueil</span></a></li>
+                <li><a href="#story" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold"><span data-i18n="nav.story">Histoire</span></a></li>
+                <li><a href="#timeline" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold"><span data-i18n="nav.program">Programme</span></a></li>
+                <li><a href="#dresscode" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold"><span data-i18n="nav.dresscode">Dress Code</span></a></li>
+                <li><a href="#gallery" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold"><span data-i18n="nav.gallery">Galerie</span></a></li>
             </ul>
             <div class="flex items-center gap-4">
                 <a href="#rsvp-section" class="bg-primary text-on-primary py-2 px-6 rounded-sm font-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm text-xs">
@@ -210,11 +210,11 @@
         <nav id="mobile-nav-list" class="md:hidden fixed bottom-0 w-full z-40 bg-surface border-t border-outline-variant/20 flex justify-around items-center py-3 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
             <a href="#home" class="nav-link flex flex-col items-center gap-1 text-primary">
                 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
-                <span class="font-label-caps text-[10px] font-semibold tracking-wider">Accueil</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider"><span data-i18n="nav.home">Accueil</span></span>
             </a>
             <a href="#story" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
                 <span class="material-symbols-outlined">menu_book</span>
-                <span class="font-label-caps text-[10px] font-semibold tracking-wider">Histoire</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider"><span data-i18n="nav.story">Histoire</span></span>
             </a>
             <a href="#bigday" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
                 <span class="material-symbols-outlined">event</span>
@@ -222,11 +222,11 @@
             </a>
             <a href="#gallery" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
                 <span class="material-symbols-outlined">photo_library</span>
-                <span class="font-label-caps text-[10px] font-semibold tracking-wider">Galerie</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider"><span data-i18n="nav.gallery">Galerie</span></span>
             </a>
             <a href="#rsvp-section" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
                 <span class="material-symbols-outlined">mail</span>
-                <span class="font-label-caps text-[10px] font-semibold tracking-wider">RSVP</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider"><span data-i18n="nav.rsvp">RSVP</span></span>
             </a>
         </nav>
 
@@ -249,7 +249,7 @@
                             RAÏSSA <br class="md:hidden"/><span class="font-accent-calligraphy italic font-light text-tertiary-fixed">&amp;</span> YVES
                         </h2>
                         <div class="h-px w-24 bg-tertiary-fixed/60 mb-6 mx-auto"></div>
-                        <p class="font-body-lg text-body-lg text-surface mb-2 drop-shadow-md">Vendredi 21 août 2026</p>
+                        <p class="font-body-lg text-body-lg text-surface mb-2 drop-shadow-md"><span data-i18n="date.date">Vendredi 21 août 2026</span></p>
                         <p class="font-accent-calligraphy text-accent-calligraphy text-tertiary-fixed mb-12 drop-shadow-md">#RAÏVES</p>
                         <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                             <a href="#story" class="bg-primary text-on-primary py-4 px-8 rounded-sm font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 shadow-md">
@@ -298,22 +298,22 @@
                         <!-- Days -->
                         <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 100ms;">
                             <span id="cd-days" class="font-display-lg text-display-lg text-primary relative z-10">420</span>
-                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Jours</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10"><span data-i18n="hero.countdown.days">Jours</span></span>
                         </div>
                         <!-- Hours -->
                         <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 200ms;">
                             <span id="cd-hours" class="font-display-lg text-display-lg text-primary relative z-10">14</span>
-                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Heures</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10"><span data-i18n="hero.countdown.hours">Heures</span></span>
                         </div>
                         <!-- Minutes -->
                         <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 300ms;">
                             <span id="cd-minutes" class="font-display-lg text-display-lg text-primary relative z-10">35</span>
-                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Minutes</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10"><span data-i18n="hero.countdown.minutes">Minutes</span></span>
                         </div>
                         <!-- Seconds -->
                         <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 400ms;">
                             <span id="cd-seconds" class="font-display-lg text-display-lg text-primary relative z-10">09</span>
-                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Secondes</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10"><span data-i18n="hero.countdown.seconds">Secondes</span></span>
                         </div>
                     </div>
                 </section>
@@ -322,10 +322,10 @@
             <!-- SECTION: STORY -->
             <div id="story" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full border-t border-outline-variant/20 section-spy">
                 <section class="text-center mb-section-gap relative z-10 reveal-element">
-                    <p class="font-label-caps text-label-caps text-secondary mb-6 tracking-widest uppercase">Là où tout a commencé</p>
+                    <p class="font-label-caps text-label-caps text-secondary mb-6 tracking-widest uppercase"><span data-i18n="story.pretitle">Là où tout a commencé</span></p>
                     <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 max-w-3xl mx-auto">
                         Il était une fois deux prénoms...<br/>
-                        <span class="font-accent-calligraphy text-secondary text-5xl md:text-7xl block mt-4">Raïssa et Yves deviennent RAÏVES.</span>
+                        <span class="font-accent-calligraphy text-secondary text-5xl md:text-7xl block mt-4"><span data-i18n="story.title">Raïssa et Yves deviennent RAÏVES.</span></span>
                     </h1>
                     <div class="w-px h-24 bg-outline-variant/50 mx-auto mt-12"></div>
                 </section>
@@ -334,9 +334,9 @@
                     <!-- Chapter 1 -->
                     <section class="relative grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-center my-16 md:my-24">
                         <div class="md:col-span-5 md:col-start-2 order-2 md:order-1 relative z-10 reveal-element delay-200">
-                            <span class="font-label-caps text-label-caps text-secondary mb-4 block">Chapitre I</span>
-                            <h2 class="font-headline-md text-headline-md text-primary mb-6">La rencontre</h2>
-                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Dans la douce lumière d'un après-midi d'été, le hasard a orchestré une rencontre inoubliable...</p>
+                            <span class="font-label-caps text-label-caps text-secondary mb-4 block"><span data-i18n="story.chap1.subtitle">Chapitre I</span></span>
+                            <h2 class="font-headline-md text-headline-md text-primary mb-6"><span data-i18n="story.chap1.title">La rencontre</span></h2>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-6"><span data-i18n="story.chap1.text">Dans la douce lumière d'un après-midi d'été, le hasard a orchestré une rencontre inoubliable...</span></p>
                         </div>
                         <div class="md:col-span-5 order-1 md:order-2 mb-8 md:mb-0 relative reveal-element">
                             <div class="aspect-[4/5] bg-surface-container overflow-hidden rounded-sm border border-outline-variant/30 p-4 md:p-6 transform rotate-2 shadow-sm transition-transform duration-500 hover:rotate-0 bg-white/50">
@@ -353,9 +353,9 @@
                             </div>
                         </div>
                         <div class="md:col-span-5 relative z-10 reveal-element delay-200">
-                            <span class="font-label-caps text-label-caps text-secondary mb-4 block">Chapitre II</span>
-                            <h2 class="font-headline-md text-headline-md text-primary mb-6">Le premier rendez-vous</h2>
-                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Une table isolée, la lueur vacillante des bougies, et des conversations qui s'étirent jusqu'au bout de la nuit...</p>
+                            <span class="font-label-caps text-label-caps text-secondary mb-4 block"><span data-i18n="story.chap2.subtitle">Chapitre II</span></span>
+                            <h2 class="font-headline-md text-headline-md text-primary mb-6"><span data-i18n="story.chap2.title">Le premier rendez-vous</span></h2>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-6"><span data-i18n="story.chap2.text">Une table isolée, la lueur vacillante des bougies, et des conversations qui s'étirent jusqu'au bout de la nuit...</span></p>
                         </div>
                     </section>
                 </div>
@@ -364,25 +364,25 @@
             <!-- SECTION: BIG DAY -->
             <div id="bigday" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-high border-t border-outline-variant/20 w-full section-spy">
                 <section class="text-center mb-24 reveal-element">
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Le grand jour</h1>
-                    <p class="font-accent-calligraphy text-accent-calligraphy text-secondary italic">Vendredi 21 août 2026</p>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6"><span data-i18n="date.title">Le grand jour</span></h1>
+                    <p class="font-accent-calligraphy text-accent-calligraphy text-secondary italic"><span data-i18n="date.date">Vendredi 21 août 2026</span></p>
                 </section>
                 
                 <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 max-w-container-max mx-auto reveal-element delay-200">
                     <div class="bg-surface border border-outline-variant/30 rounded-xl p-8 flex flex-col items-center text-center shadow-sm">
                         <span class="material-symbols-outlined text-3xl text-secondary mb-6">schedule</span>
-                        <h3 class="font-headline-md text-primary mb-4 text-xl">L'Heure</h3>
+                        <h3 class="font-headline-md text-primary mb-4 text-xl"><span data-i18n="date.time.title">L'Heure</span></h3>
                         <p class="font-body-lg text-on-surface-variant pb-2 inline-block">15:00</p>
                     </div>
                     <div class="bg-surface border border-outline-variant/30 rounded-xl p-8 flex flex-col items-center text-center shadow-sm md:-translate-y-4">
                         <span class="material-symbols-outlined text-3xl text-secondary mb-6">account_balance</span>
-                        <h3 class="font-headline-md text-primary mb-4 text-xl">Le Domaine</h3>
-                        <p class="font-body-lg text-on-surface-variant pb-2 inline-block">Château de Rêve</p>
+                        <h3 class="font-headline-md text-primary mb-4 text-xl"><span data-i18n="date.domain.title">Le Domaine</span></h3>
+                        <p class="font-body-lg text-on-surface-variant pb-2 inline-block"><span data-i18n="date.domain.value">Château de Rêve</span></p>
                     </div>
                     <div class="bg-surface border border-outline-variant/30 rounded-xl p-8 flex flex-col items-center text-center shadow-sm">
                         <span class="material-symbols-outlined text-3xl text-secondary mb-6">map</span>
-                        <h3 class="font-headline-md text-primary mb-4 text-xl">L'Adresse</h3>
-                        <p class="font-body-lg text-on-surface-variant pb-2 inline-block">123 Allée de l'Amour</p>
+                        <h3 class="font-headline-md text-primary mb-4 text-xl"><span data-i18n="date.address.title">L'Adresse</span></h3>
+                        <p class="font-body-lg text-on-surface-variant pb-2 inline-block"><span data-i18n="date.address.value">123 Allée de l'Amour</span></p>
                     </div>
                 </section>
             </div>
@@ -390,8 +390,8 @@
             <!-- SECTION: TIMELINE -->
             <div id="timeline" class="pt-24 pb-section-gap px-2 md:px-margin-desktop bg-surface w-full border-t border-outline-variant/20 section-spy overflow-hidden">
                 <section class="text-center mb-12 md:mb-24 reveal-element">
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6">Le Programme</h1>
-                    <p class="font-accent-calligraphy text-accent-calligraphy text-secondary italic">Déroulement de la journée</p>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6"><span data-i18n="program.title">Le Programme</span></h1>
+                    <p class="font-accent-calligraphy text-accent-calligraphy text-secondary italic"><span data-i18n="program.subtitle">Déroulement de la journée</span></p>
                 </section>
 
                 <div class="max-w-4xl mx-auto relative reveal-element delay-200 py-4 md:py-12 w-full">
@@ -402,8 +402,8 @@
                         <!-- Timeline Item 1 -->
                         <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
                             <div class="w-[45%] text-right pr-4 md:pr-8">
-                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Célébration civile</h3>
-                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">L'union officielle entourée de nos proches.</p>
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight"><span data-i18n="program.civil.title">Célébration civile</span></h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block"><span data-i18n="program.civil.text">L'union officielle entourée de nos proches.</span></p>
                             </div>
                             
                             <!-- Golden Node -->
@@ -434,16 +434,16 @@
                             <div class="absolute right-1/2 top-1/2 w-[15%] md:w-[5%] h-[1px] md:h-[2px] bg-gradient-to-l from-[#c09d55] to-transparent transform -translate-y-1/2"></div>
                             
                             <div class="w-[45%] text-left pl-4 md:pl-8">
-                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Séance photo</h3>
-                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Immortalisons ces moments inoubliables avec vous.</p>
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight"><span data-i18n="program.photo.title">Séance photo</span></h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block"><span data-i18n="program.photo.text">Immortalisons ces moments inoubliables avec vous.</span></p>
                             </div>
                         </div>
 
                         <!-- Timeline Item 3 -->
                         <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
                             <div class="w-[45%] text-right pr-4 md:pr-8">
-                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Cocktail</h3>
-                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Rafraîchissements et bouchées délicates au soleil.</p>
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight"><span data-i18n="program.cocktail.title">Cocktail</span></h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block"><span data-i18n="program.cocktail.text">Rafraîchissements et bouchées délicates au soleil.</span></p>
                             </div>
                             
                             <!-- Golden Node -->
@@ -474,16 +474,16 @@
                             <div class="absolute right-1/2 top-1/2 w-[15%] md:w-[5%] h-[1px] md:h-[2px] bg-gradient-to-l from-[#c09d55] to-transparent transform -translate-y-1/2"></div>
                             
                             <div class="w-[45%] text-left pl-4 md:pl-8">
-                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Réception</h3>
-                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Le début des festivités et du banquet luxueux.</p>
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight"><span data-i18n="program.dinner.title">Réception</span></h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block"><span data-i18n="program.dinner.text">Le début des festivités et du banquet luxueux.</span></p>
                             </div>
                         </div>
 
                         <!-- Timeline Item 5 -->
                         <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
                             <div class="w-[45%] text-right pr-4 md:pr-8">
-                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Piste libre</h3>
-                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Musique, danse et célébration jusqu'au bout de la nuit.</p>
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight"><span data-i18n="program.party.title">Piste libre</span></h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block"><span data-i18n="program.party.text">Musique, danse et célébration jusqu'au bout de la nuit.</span></p>
                             </div>
                             
                             <!-- Golden Node -->
@@ -505,10 +505,10 @@
             <!-- SECTION: DRESS CODE (Wedding Planner) -->
             <div id="dresscode" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-high border-t border-outline-variant/20 w-full section-spy overflow-hidden">
                 <section class="text-center mb-16 reveal-element">
-                    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block">Dress Code Officiel</span>
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Conseil de Manuella, la Wedding Planner</h1>
+                    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block"><span data-i18n="dresscode.pretitle">Dress Code Officiel</span></span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6"><span data-i18n="dresscode.title">Conseil de Manuella, la Wedding Planner</span></h1>
                     <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                        Une harmonie entre l'élégance naturelle d'un domaine viticole et la fraîcheur raffinée d'un jardin tropical. Privilégiez les teintes profondes (vert forêt, bordeaux, terracotta, beige sable) et les matières nobles.
+                        <span data-i18n="dresscode.text">Une harmonie entre l'élégance naturelle d'un domaine viticole et la fraîcheur raffinée d'un jardin tropical. Privilégiez les teintes profondes (vert forêt, bordeaux, terracotta, beige sable) et les matières nobles.</span>
                     </p>
                 </section>
                 
@@ -519,13 +519,13 @@
                         <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20">
                             <img src="images/dresscode_duo_greenburgundy_1784589007214.png" alt="Duo Elegance" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
                             <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <p class="font-label-caps text-primary tracking-widest">Inspiration Duo</p>
+                                <p class="font-label-caps text-primary tracking-widest"><span data-i18n="dresscode.duo">Inspiration Duo</span></p>
                             </div>
                         </div>
                         <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 aspect-square">
                             <img src="images/dresscode_women_burgundy_1784588985062.png" alt="Women Elegance" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
                             <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <p class="font-label-caps text-primary tracking-widest">Silhouette Féminine</p>
+                                <p class="font-label-caps text-primary tracking-widest"><span data-i18n="dresscode.women">Silhouette Féminine</span></p>
                             </div>
                         </div>
                     </div>
@@ -534,13 +534,13 @@
                         <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 aspect-[3/4]">
                             <img src="images/dresscode_men_green_1784588970382.png" alt="Men Elegance" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
                             <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <p class="font-label-caps text-primary tracking-widest">Silhouette Masculine</p>
+                                <p class="font-label-caps text-primary tracking-widest"><span data-i18n="dresscode.men">Silhouette Masculine</span></p>
                             </div>
                         </div>
                         <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 h-48">
                             <img src="images/dresscode_details_1784589015729.png" alt="Details and Fabrics" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
                             <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <p class="font-label-caps text-primary tracking-widest">Détails & Matières</p>
+                                <p class="font-label-caps text-primary tracking-widest"><span data-i18n="dresscode.details">Détails & Matières</span></p>
                             </div>
                         </div>
                     </div>
@@ -549,7 +549,7 @@
                         <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 h-full min-h-[400px]">
                             <img src="images/dresscode_duo_sandsage_1784588993497.png" alt="Duo Elegance Alternative" class="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-105"/>
                             <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                <p class="font-label-caps text-primary tracking-widest">Harmonie des Couleurs</p>
+                                <p class="font-label-caps text-primary tracking-widest"><span data-i18n="dresscode.colors">Harmonie des Couleurs</span></p>
                             </div>
                         </div>
                     </div>
@@ -560,36 +560,36 @@
             <!-- SECTION: GALLERY -->
             <div id="gallery" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full border-t border-outline-variant/20 section-spy">
                 <section class="text-center mb-16 reveal-element">
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4">Notre Galerie</h1>
-                    <p class="font-body-lg text-on-surface-variant">Quelques instants figés dans le temps...</p>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4"><span data-i18n="gallery.title">Notre Galerie</span></h1>
+                    <p class="font-body-lg text-on-surface-variant"><span data-i18n="gallery.subtitle">Quelques instants figés dans le temps...</span></p>
                 </section>
 
                 <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-[250px]">
                     <div class="reveal-element delay-100 relative group overflow-hidden rounded-xl shadow-sm md:col-span-2 md:row-span-2">
                         <img src="images/photo-demande-mariage.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="La demande"/>
                         <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <span class="font-accent-calligraphy text-surface text-2xl drop-shadow-md">La demande en mariage</span>
+                            <span class="font-accent-calligraphy text-surface text-2xl drop-shadow-md"><span data-i18n="gallery.proposal">La demande en mariage</span></span>
                         </div>
                     </div>
                     
                     <div class="reveal-element delay-200 relative group overflow-hidden rounded-xl shadow-sm">
                         <img src="images/img_20260707_wa0006.jpg.jpeg.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Moment 1"/>
                         <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <span class="font-accent-calligraphy text-surface text-xl drop-shadow-md">Complices</span>
+                            <span class="font-accent-calligraphy text-surface text-xl drop-shadow-md"><span data-i18n="gallery.complicity">Complices</span></span>
                         </div>
                     </div>
                     
                     <div class="reveal-element delay-300 relative group overflow-hidden rounded-xl shadow-sm">
                         <img src="images/img_20260707_wa0005.jpg.jpeg.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Moment 2"/>
                         <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <span class="font-accent-calligraphy text-surface text-xl drop-shadow-md">Sourires</span>
+                            <span class="font-accent-calligraphy text-surface text-xl drop-shadow-md"><span data-i18n="gallery.smiles">Sourires</span></span>
                         </div>
                     </div>
                     
                     <div class="reveal-element delay-400 relative group overflow-hidden rounded-xl shadow-sm md:col-span-3 h-[400px]">
                         <img src="images/mpp_1315.jpg.jpeg.png" class="w-full h-full object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-110" alt="Moment 3"/>
                         <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <span class="font-accent-calligraphy text-surface text-2xl drop-shadow-md">L'élégance</span>
+                            <span class="font-accent-calligraphy text-surface text-2xl drop-shadow-md"><span data-i18n="gallery.elegance">L'élégance</span></span>
                         </div>
                     </div>
                 </section>
@@ -598,36 +598,36 @@
             <!-- SECTION: RSVP -->
             <div id="rsvp-section" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop bg-surface w-full flex flex-col items-center border-t border-outline-variant/20 section-spy">
                 <div id="form-container" class="w-full max-w-2xl transition-opacity duration-500 reveal-element">
-                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary text-center mb-4">RSVP</h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant text-center mb-12">Veuillez confirmer votre présence pour célébrer ce moment avec nous.</p>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary text-center mb-4"><span data-i18n="nav.rsvp">RSVP</span></h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant text-center mb-12"><span data-i18n="rsvp.text">Veuillez confirmer votre présence pour célébrer ce moment avec nous.</span></p>
                     
                     <form id="rsvp-form" class="w-full glass-card p-8 md:p-12 shadow-sm rounded-DEFAULT flex flex-col gap-6 relative overflow-hidden bg-surface-container">
                         <div id="sending-overlay" class="absolute inset-0 bg-surface/80 backdrop-blur-sm z-20 flex flex-col items-center justify-center hidden opacity-0 transition-opacity duration-300">
                             <svg class="w-16 h-16 text-primary animate-spin-slow" fill="none" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="currentColor" stroke-dasharray="70 200" stroke-width="2"></circle><path d="M50 10 C55 25, 70 35, 80 50" fill="none" stroke="currentColor" stroke-width="1"></path></svg>
-                            <p class="font-accent-calligraphy text-accent-calligraphy text-primary mt-6 italic">Envoi de votre réponse...</p>
+                            <p class="font-accent-calligraphy text-accent-calligraphy text-primary mt-6 italic"><span data-i18n="rsvp.sending">Envoi de votre réponse...</span></p>
                         </div>
                         <div id="error-overlay" class="absolute inset-0 bg-error-container/95 backdrop-blur-md z-30 flex flex-col items-center justify-center p-8 text-center hidden opacity-0 transition-opacity duration-300">
                             <span class="material-symbols-outlined text-4xl text-on-error-container mb-4">error</span>
-                            <p class="font-body-lg text-body-lg text-on-error-container mb-6">Une erreur est survenue.</p>
-                            <button type="button" id="retry-btn" class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 hover:bg-surface-tint transition-colors duration-300">Réessayer</button>
+                            <p class="font-body-lg text-body-lg text-on-error-container mb-6"><span data-i18n="rsvp.error">Une erreur est survenue.</span></p>
+                            <button type="button" id="retry-btn" class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 hover:bg-surface-tint transition-colors duration-300"><span data-i18n="rsvp.retry">Réessayer</span></button>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="flex flex-col gap-2">
-                                <label for="nom" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Nom Complet</label>
-                                <input type="text" id="nom" name="nom" required class="form-input-elegant" placeholder="Votre nom"/>
+                                <label for="nom" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest"><span data-i18n="rsvp.name">Nom Complet</span></label>
+                                <input type="text" id="nom" name="nom" required class="form-input-elegant" placeholder="Votre nom" data-i18n="rsvp.name.placeholder"/>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <label for="telephone" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Téléphone</label>
-                                <input type="tel" id="telephone" name="telephone" class="form-input-elegant" placeholder="+33 6 00 00 00 00"/>
+                                <label for="telephone" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest"><span data-i18n="rsvp.phone">Téléphone</span></label>
+                                <input type="tel" id="telephone" name="telephone" class="form-input-elegant" placeholder="+33 6 00 00 00 00" data-i18n="rsvp.phone.placeholder"/>
                             </div>
                         </div>
                         <div class="flex flex-col gap-2">
-                            <label for="email" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">E-mail</label>
-                            <input type="email" id="email" name="email" required class="form-input-elegant" placeholder="votre@email.com"/>
+                            <label for="email" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest"><span data-i18n="rsvp.email">E-mail</span></label>
+                            <input type="email" id="email" name="email" required class="form-input-elegant" placeholder="votre@email.com" data-i18n="rsvp.email.placeholder"/>
                         </div>
                         <button type="submit" id="submit-btn" class="mt-8 bg-primary text-on-primary font-label-caps text-label-caps py-4 px-8 w-full md:w-auto self-center hover:bg-surface-tint transition-colors duration-300">
-                            Confirmer ma présence
+                            <span data-i18n="rsvp.submit">Confirmer ma présence</span>
                         </button>
                     </form>
                 </div>
@@ -641,14 +641,14 @@
                     <h2 class="font-accent-calligraphy text-accent-calligraphy md:text-headline-md text-primary mb-6 italic max-w-xl leading-relaxed success-element delay-500">
                         "Certains moments sont précieux... Merci de faire partie de notre histoire."
                     </h2>
-                    <p class="font-headline-md text-body-lg text-secondary mb-16 success-element delay-700">Avec amour, Raïssa & Yves</p>
+                    <p class="font-headline-md text-body-lg text-secondary mb-16 success-element delay-700"><span data-i18n="footer.love">Avec amour, Raïssa & Yves</span></p>
                 </section>
             </div>
 
             <!-- Footer -->
             <footer class="w-full py-16 px-margin-desktop flex flex-col items-center gap-2 bg-surface-container-highest border-t border-outline-variant/20 mt-auto z-10 relative">
                 <h4 class="font-accent-calligraphy text-headline-md text-secondary mb-4">RAÏVES</h4>
-                <p class="font-body-md text-body-md text-on-surface-variant text-center opacity-80 mb-6">© 2026 RAÏVES. Signature of Elegance.</p>
+                <p class="font-body-md text-body-md text-on-surface-variant text-center opacity-80 mb-6"><span data-i18n="footer.copyright">© 2026 RAÏVES. Signature of Elegance.</span></p>
             </footer>
 
         </main>
