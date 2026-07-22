@@ -180,19 +180,31 @@
                 <li><a href="#dresscode" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Dress Code</a></li>
                 <li><a href="#gallery" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Galerie</a></li>
             </ul>
-            <div>
+            <div class="flex items-center gap-4">
                 <a href="#rsvp-section" class="bg-primary text-on-primary py-2 px-6 rounded-sm font-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm text-xs">
                     RSVP
                 </a>
+                <div class="flex items-center space-x-2">
+                    <button id="lang-fr" class="lang-btn font-label-caps text-xs text-primary font-bold transition-colors">FR</button>
+                    <span class="text-outline-variant/30 text-xs">|</span>
+                    <button id="lang-en" class="lang-btn font-label-caps text-xs text-on-surface-variant transition-colors hover:text-primary">EN</button>
+                </div>
             </div>
         </nav>
 
         <!-- Mobile Header & Nav -->
         <header id="main-header" class="md:hidden fixed top-0 w-full z-40 flex justify-between items-center px-margin-mobile py-4 transition-all duration-300 transform bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
             <h1 class="font-display-lg-mobile text-headline-md tracking-widest text-primary">RAÏVES</h1>
-            <button class="text-primary p-2">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
+            <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                    <button id="lang-fr" class="lang-btn font-label-caps text-xs text-primary font-bold transition-colors">FR</button>
+                    <span class="text-outline-variant/30 text-xs">|</span>
+                    <button id="lang-en" class="lang-btn font-label-caps text-xs text-on-surface-variant transition-colors hover:text-primary">EN</button>
+                </div>
+                <button class="text-primary p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
         </header>
 
         <nav id="mobile-nav-list" class="md:hidden fixed bottom-0 w-full z-40 bg-surface border-t border-outline-variant/20 flex justify-around items-center py-3 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
