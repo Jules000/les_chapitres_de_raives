@@ -657,5 +657,16 @@
     <!-- Main JavaScript Logic -->
     <script src="translations.js"></script>
     <script src="script.js"></script>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="media/Alex Warren - Ordinary.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button id="music-toggle" class="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 bg-surface/80 backdrop-blur-sm border border-outline-variant/30 text-primary p-3 rounded-full shadow-lg hover:bg-primary hover:text-on-primary transition-all duration-300 hidden">
+        <span id="music-icon" class="material-symbols-outlined">music_off</span>
+    </button>
+
 </body>
 </html>
