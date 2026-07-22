@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Les chapitres de RAÏVES</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS Config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#3f665a",
+                        "on-tertiary-fixed-variant": "#5c4200",
+                        "primary-container": "#173f35",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#3e0212",
+                        "secondary": "#954552",
+                        "surface": "#fef9ef",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#c1ecdd",
+                        "tertiary-fixed-dim": "#e8c175",
+                        "on-primary-container": "#82aa9d",
+                        "surface-container-high": "#ece8de",
+                        "tertiary-fixed": "#ffdea2",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#c09d55",
+                        "surface-container": "#f2ede3",
+                        "surface-container-highest": "#e7e2d8",
+                        "surface-bright": "#fef9ef",
+                        "surface-variant": "#e7e2d8",
+                        "surface-dim": "#dedad0",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002019",
+                        "on-primary-fixed-variant": "#274e43",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f5f0e6",
+                        "outline": "#717975",
+                        "tertiary": "#2f2100",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#a6cfc1",
+                        "on-background": "#1d1c16",
+                        "secondary-container": "#fd9aa7",
+                        "on-tertiary-fixed": "#261900",
+                        "outline-variant": "#c0c8c4",
+                        "on-secondary-container": "#782f3c",
+                        "on-surface": "#1d1c16",
+                        "inverse-primary": "#a6cfc1",
+                        "secondary-fixed": "#ffd9dd",
+                        "on-secondary-fixed-variant": "#772e3c",
+                        "inverse-surface": "#32302a",
+                        "tertiary-container": "#4a3500",
+                        "background": "#fef9ef",
+                        "on-surface-variant": "#414845",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb2bb",
+                        "surface-container-low": "#f8f3e9",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#002920"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1200px",
+                        "section-gap": "128px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "label-caps": ["Montserrat", "sans-serif"],
+                        "headline-md": ["Cormorant Garamond", "serif"],
+                        "accent-calligraphy": ["Playfair Display", "serif"],
+                        "display-lg": ["Cormorant Garamond", "serif"],
+                        "body-md": ["Montserrat", "sans-serif"],
+                        "display-lg-mobile": ["Cormorant Garamond", "serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "300" }],
+                        "label-caps": ["12px", { lineHeight: "1.2", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "accent-calligraphy": ["24px", { lineHeight: "1.5", fontWeight: "400", fontStyle: "italic" }],
+                        "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "300" }],
+                        "display-lg-mobile": ["40px", { lineHeight: "1.2", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen overflow-hidden flex flex-col relative selection:bg-primary-container selection:text-on-primary-container font-body-lg">
+    
+    <div class="texture-overlay"></div>
+
+    <!-- ENVELOPE INTRO SCREEN -->
+    <div id="intro-screen" class="fixed inset-0 flex flex-col items-center justify-center bg-[#fdfbf7] w-full h-full overflow-hidden">
+        
+        <!-- Animated Tropical Palm Leaves Drawing from Corners -->
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+
+            <!-- Top Left Palm -->
+            <svg class="absolute top-[-2%] left-[-2%] w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 z-0 opacity-90" viewBox="0 0 100 100" fill="none" stroke-linecap="round">
+                <!-- Main stem -->
+                <path class="draw-path" d="M 0,0 Q 40,30 90,80" stroke="#6c7a52" stroke-width="1.5" style="animation-delay: 0s;" />
+                
+                <!-- Top leaves -->
+                <g class="bloom" style="animation-delay: 0.2s; transform-origin: 15px 11px;">
+                    <path d="M 15,11 Q 35,-5 55,-2 Q 40,10 15,11 Z" fill="#6c7a52" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 0.5s; transform-origin: 35px 26px;">
+                    <path d="M 35,26 Q 60,10 80,15 Q 65,30 35,26 Z" fill="#6c7a52" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 0.8s; transform-origin: 55px 43px;">
+                    <path d="M 55,43 Q 80,30 100,40 Q 85,50 55,43 Z" fill="#6c7a52" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.1s; transform-origin: 75px 63px;">
+                    <path d="M 75,63 Q 95,55 110,70 Q 95,75 75,63 Z" fill="#6c7a52" opacity="0.9" stroke="none"/>
+                </g>
+
+                <!-- Bottom leaves -->
+                <g class="bloom" style="animation-delay: 0.3s; transform-origin: 10px 8px;">
+                    <path d="M 10,8 Q 0,25 -2,45 Q 15,30 10,8 Z" fill="#586341" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 0.6s; transform-origin: 25px 19px;">
+                    <path d="M 25,19 Q 15,40 10,65 Q 35,45 25,19 Z" fill="#586341" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 0.9s; transform-origin: 45px 34px;">
+                    <path d="M 45,34 Q 30,55 30,85 Q 55,60 45,34 Z" fill="#586341" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.2s; transform-origin: 65px 53px;">
+                    <path d="M 65,53 Q 55,75 60,100 Q 80,80 65,53 Z" fill="#586341" opacity="0.9" stroke="none"/>
+                </g>
+            </svg>
+
+            <!-- Top Right Palm -->
+            <svg class="absolute top-[-2%] right-[-2%] w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 z-0 opacity-90 transform scale-x-[-1]" viewBox="0 0 100 100" fill="none" stroke-linecap="round">
+                <path class="draw-path" d="M 0,0 Q 40,30 90,80" stroke="#6c7a52" stroke-width="1.5" style="animation-delay: 0.2s;" />
+                
+                <g class="bloom" style="animation-delay: 0.4s; transform-origin: 15px 11px;">
+                    <path d="M 15,11 Q 35,-5 55,-2 Q 40,10 15,11 Z" fill="#6c7a52" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 0.7s; transform-origin: 35px 26px;">
+                    <path d="M 35,26 Q 60,10 80,15 Q 65,30 35,26 Z" fill="#6c7a52" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.0s; transform-origin: 55px 43px;">
+                    <path d="M 55,43 Q 80,30 100,40 Q 85,50 55,43 Z" fill="#6c7a52" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.3s; transform-origin: 75px 63px;">
+                    <path d="M 75,63 Q 95,55 110,70 Q 95,75 75,63 Z" fill="#6c7a52" opacity="0.9" stroke="none"/>
+                </g>
+
+                <g class="bloom" style="animation-delay: 0.5s; transform-origin: 10px 8px;">
+                    <path d="M 10,8 Q 0,25 -2,45 Q 15,30 10,8 Z" fill="#586341" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 0.8s; transform-origin: 25px 19px;">
+                    <path d="M 25,19 Q 15,40 10,65 Q 35,45 25,19 Z" fill="#586341" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.1s; transform-origin: 45px 34px;">
+                    <path d="M 45,34 Q 30,55 30,85 Q 55,60 45,34 Z" fill="#586341" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.4s; transform-origin: 65px 53px;">
+                    <path d="M 65,53 Q 55,75 60,100 Q 80,80 65,53 Z" fill="#586341" opacity="0.9" stroke="none"/>
+                </g>
+            </svg>
+
+            <!-- Bottom Left Palm -->
+            <svg class="absolute bottom-[-2%] left-[-2%] w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 z-0 opacity-90 transform scale-y-[-1]" viewBox="0 0 100 100" fill="none" stroke-linecap="round">
+                <path class="draw-path" d="M 0,0 Q 40,30 90,80" stroke="#6c7a52" stroke-width="1.5" style="animation-delay: 0.4s;" />
+                
+                <g class="bloom" style="animation-delay: 0.6s; transform-origin: 15px 11px;">
+                    <path d="M 15,11 Q 35,-5 55,-2 Q 40,10 15,11 Z" fill="#6c7a52" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 0.9s; transform-origin: 35px 26px;">
+                    <path d="M 35,26 Q 60,10 80,15 Q 65,30 35,26 Z" fill="#6c7a52" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.2s; transform-origin: 55px 43px;">
+                    <path d="M 55,43 Q 80,30 100,40 Q 85,50 55,43 Z" fill="#6c7a52" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.5s; transform-origin: 75px 63px;">
+                    <path d="M 75,63 Q 95,55 110,70 Q 95,75 75,63 Z" fill="#6c7a52" opacity="0.9" stroke="none"/>
+                </g>
+
+                <g class="bloom" style="animation-delay: 0.7s; transform-origin: 10px 8px;">
+                    <path d="M 10,8 Q 0,25 -2,45 Q 15,30 10,8 Z" fill="#586341" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.0s; transform-origin: 25px 19px;">
+                    <path d="M 25,19 Q 15,40 10,65 Q 35,45 25,19 Z" fill="#586341" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.3s; transform-origin: 45px 34px;">
+                    <path d="M 45,34 Q 30,55 30,85 Q 55,60 45,34 Z" fill="#586341" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.6s; transform-origin: 65px 53px;">
+                    <path d="M 65,53 Q 55,75 60,100 Q 80,80 65,53 Z" fill="#586341" opacity="0.9" stroke="none"/>
+                </g>
+            </svg>
+
+            <!-- Bottom Right Palm -->
+            <svg class="absolute bottom-[-2%] right-[-2%] w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 z-0 opacity-90 transform scale-[-1]" viewBox="0 0 100 100" fill="none" stroke-linecap="round">
+                <path class="draw-path" d="M 0,0 Q 40,30 90,80" stroke="#6c7a52" stroke-width="1.5" style="animation-delay: 0.6s;" />
+                
+                <g class="bloom" style="animation-delay: 0.8s; transform-origin: 15px 11px;">
+                    <path d="M 15,11 Q 35,-5 55,-2 Q 40,10 15,11 Z" fill="#6c7a52" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.1s; transform-origin: 35px 26px;">
+                    <path d="M 35,26 Q 60,10 80,15 Q 65,30 35,26 Z" fill="#6c7a52" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.4s; transform-origin: 55px 43px;">
+                    <path d="M 55,43 Q 80,30 100,40 Q 85,50 55,43 Z" fill="#6c7a52" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.7s; transform-origin: 75px 63px;">
+                    <path d="M 75,63 Q 95,55 110,70 Q 95,75 75,63 Z" fill="#6c7a52" opacity="0.9" stroke="none"/>
+                </g>
+
+                <g class="bloom" style="animation-delay: 0.9s; transform-origin: 10px 8px;">
+                    <path d="M 10,8 Q 0,25 -2,45 Q 15,30 10,8 Z" fill="#586341" opacity="0.75" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.2s; transform-origin: 25px 19px;">
+                    <path d="M 25,19 Q 15,40 10,65 Q 35,45 25,19 Z" fill="#586341" opacity="0.8" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.5s; transform-origin: 45px 34px;">
+                    <path d="M 45,34 Q 30,55 30,85 Q 55,60 45,34 Z" fill="#586341" opacity="0.85" stroke="none"/>
+                </g>
+                <g class="bloom" style="animation-delay: 1.8s; transform-origin: 65px 53px;">
+                    <path d="M 65,53 Q 55,75 60,100 Q 80,80 65,53 Z" fill="#586341" opacity="0.9" stroke="none"/>
+                </g>
+            </svg>
+        </div>
+
+        <div id="intro-text-top" class="text-center mb-12 z-10 transition-opacity duration-500">
+            <p class="font-accent-calligraphy text-accent-calligraphy text-secondary opacity-90 drop-shadow-md text-3xl md:text-5xl">Une invitation vous attend !</p>
+        </div>
+        
+        <!-- Envelope Container -->
+        <div id="envelope-container" class="relative w-[90vw] max-w-[450px] h-72 z-10 drop-shadow-2xl cursor-pointer">
+            <!-- Inside Liner (Dark Forest Green) -->
+            <div class="absolute inset-0 bg-[#1e2e26] rounded-md shadow-inner border border-[#14201a] overflow-hidden texture-overlay">
+                <!-- Inner subtle gold border for liner -->
+                <div class="absolute inset-3 border-[1.5px] border-[#c09d55]/60 rounded-sm"></div>
+            </div>
+            
+            <!-- Inner Card -->
+            <div id="inner-card" class="absolute bottom-2 left-3 right-3 h-[130%] bg-white rounded-sm shadow-[0_5px_30px_rgba(0,0,0,0.6)] flex flex-col items-center justify-start p-2 text-center z-10 border-2 border-[#c09d55] texture-overlay">
+                <div id="card-content" class="w-full h-full opacity-0 transition-opacity duration-1000 delay-500 z-10 flex items-center justify-center bg-white">
+                    <img src="images/FR-faire-part.png" alt="Faire Part" class="w-full h-full object-contain" />
+                </div>
+            </div>
+
+            <!-- Envelope Side Flaps (to create the pocket) -->
+            <!-- Left Flap -->
+            <div class="absolute inset-0 z-20 pointer-events-none drop-shadow-md">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#e8e2d4] to-[#dfd7c5] rounded-bl-md rounded-tl-md texture-overlay border-l-2 border-b-2 border-[#c09d55]/40" style="clip-path: polygon(0 0, 52% 52%, 0 100%);"></div>
+            </div>
+            <!-- Right Flap -->
+            <div class="absolute inset-0 z-20 pointer-events-none drop-shadow-md">
+                <div class="absolute inset-0 bg-gradient-to-l from-[#e8e2d4] to-[#dfd7c5] rounded-br-md rounded-tr-md texture-overlay border-r-2 border-b-2 border-[#c09d55]/40" style="clip-path: polygon(100% 0, 48% 52%, 100% 100%);"></div>
+            </div>
+            <!-- Bottom Flap -->
+            <div class="absolute inset-0 z-20 pointer-events-none drop-shadow-xl">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#f4efe6] to-[#ebe4d6] rounded-b-md texture-overlay border-b-2 border-[#c09d55]/50" style="clip-path: polygon(0 100%, 50% 48%, 100% 100%);"></div>
+            </div>
+            
+            <!-- Top Flap (The one that opens) -->
+            <div id="envelope-flap" class="flap absolute top-0 left-0 w-full h-[60%] origin-top z-30 drop-shadow-[0_8px_15px_rgba(0,0,0,0.2)]">
+                <div class="w-full h-full bg-gradient-to-b from-[#fbf9f4] to-[#efe9dc] rounded-t-md texture-overlay border-t-2 border-[#c09d55]/60" style="clip-path: polygon(0 0, 100% 0, 50% 100%);"></div>
+                <!-- Wax Seal -->
+                <div id="wax-seal" class="seal absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[35%] w-24 h-24 bg-[#63202e] rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.6)] border-[4px] border-[#c09d55] overflow-hidden z-40 hover:scale-105 transition-transform duration-300">
+                    <img src="images/monogram.jpeg.png" alt="Seal" class="w-full h-full object-cover opacity-90"/>
+                </div>
+            </div>
+        </div>
+
+        <button id="open-envelope-btn" class="mt-12 px-8 py-3 bg-primary text-[#fdfbf7] rounded-full font-label-caps tracking-widest text-sm border-2 border-[#c09d55] shadow-lg hover:bg-secondary hover:scale-105 transition-all duration-300 z-20">Ouvrir l'enveloppe</button>
+
+        <!-- Confetti Canvas -->
+        <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+    </div>
+
+    <!-- MAIN SITE -->
+    <div id="main-site" class="w-full min-h-screen relative flex flex-col">
+        
+        <!-- Desktop Top Navigation -->
+        <nav class="hidden md:flex fixed top-0 w-full bg-surface/90 backdrop-blur-md z-50 px-8 py-4 justify-between items-center border-b border-outline-variant/20 shadow-sm">
+            <div class="flex items-center gap-4">
+                <h1 class="font-display-lg-mobile text-headline-md text-primary tracking-widest">RAÏVES</h1>
+            </div>
+            <ul class="flex flex-row gap-6 items-center" id="desktop-nav-list">
+                <li><a href="#home" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Accueil</a></li>
+                <li><a href="#story" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Histoire</a></li>
+                <li><a href="#timeline" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Programme</a></li>
+                <li><a href="#dresscode" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Dress Code</a></li>
+                <li><a href="#gallery" class="nav-link text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-xs font-semibold">Galerie</a></li>
+            </ul>
+            <div>
+                <a href="#rsvp-section" class="bg-primary text-on-primary py-2 px-6 rounded-sm font-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm text-xs">
+                    RSVP
+                </a>
+            </div>
+        </nav>
+
+        <!-- Mobile Header & Nav -->
+        <header id="main-header" class="md:hidden fixed top-0 w-full z-40 flex justify-between items-center px-margin-mobile py-4 transition-all duration-300 transform bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
+            <h1 class="font-display-lg-mobile text-headline-md tracking-widest text-primary">RAÏVES</h1>
+            <button class="text-primary p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </header>
+
+        <nav id="mobile-nav-list" class="md:hidden fixed bottom-0 w-full z-40 bg-surface border-t border-outline-variant/20 flex justify-around items-center py-3 pb-safe shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+            <a href="#home" class="nav-link flex flex-col items-center gap-1 text-primary">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider">Accueil</span>
+            </a>
+            <a href="#story" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined">menu_book</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider">Histoire</span>
+            </a>
+            <a href="#bigday" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined">event</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider">Jour J</span>
+            </a>
+            <a href="#gallery" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined">photo_library</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider">Galerie</span>
+            </a>
+            <a href="#rsvp-section" class="nav-link flex flex-col items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined">mail</span>
+                <span class="font-label-caps text-[10px] font-semibold tracking-wider">RSVP</span>
+            </a>
+        </nav>
+
+        <!-- Main Content Canvas -->
+        <main class="w-full flex-grow flex flex-col md:pt-20">
+            
+            <!-- SECTION: HOME -->
+            <div id="home">
+                <!-- Hero Section -->
+                <section class="relative w-full h-[85vh] flex items-center justify-center overflow-hidden section-spy">
+                    <div id="hero-parallax-container" class="absolute inset-0 w-full h-full">
+                        <img src="images/photo-couverture-raissa-yves.jpeg" alt="Raïssa and Yves" class="absolute inset-0 w-full h-full object-cover object-[50%_30%] opacity-90 scale-105 animate-[slowZoom_20s_ease-in-out_infinite_alternate]"/>
+                    </div>
+                    <!-- Enhanced dark overlay for text legibility -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-surface/90"></div>
+                    
+                    <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop flex flex-col items-center max-w-4xl mx-auto mt-12 md:mt-0">
+                        <span class="font-label-caps text-label-caps text-surface uppercase tracking-[0.3em] mb-4 drop-shadow-md">Save the Date</span>
+                        <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-surface mb-6 drop-shadow-lg leading-tight">
+                            RAÏSSA <br class="md:hidden"/><span class="font-accent-calligraphy italic font-light text-tertiary-fixed">&amp;</span> YVES
+                        </h2>
+                        <div class="h-px w-24 bg-tertiary-fixed/60 mb-6 mx-auto"></div>
+                        <p class="font-body-lg text-body-lg text-surface mb-2 drop-shadow-md">Vendredi 21 août 2026</p>
+                        <p class="font-accent-calligraphy text-accent-calligraphy text-tertiary-fixed mb-12 drop-shadow-md">#RAÏVES</p>
+                        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                            <a href="#story" class="bg-primary text-on-primary py-4 px-8 rounded-sm font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 shadow-md">
+                                Découvrir notre histoire
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Save the date image section -->
+                <section class="py-12 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface relative flex flex-col items-center justify-center overflow-hidden">
+                    <div class="text-center mb-12 reveal-element">
+                        <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block">Officiel</span>
+                        <h3 class="font-headline-md text-headline-md text-primary">Réservez cette date</h3>
+                    </div>
+                    
+                    <div class="relative w-full max-w-5xl group reveal-element delay-200">
+                        <!-- Decorative backgrounds/borders -->
+                        <div class="absolute -inset-4 md:-inset-8 border border-tertiary-fixed-dim/40 rounded-lg transform transition-transform duration-1000 group-hover:scale-[1.02] pointer-events-none"></div>
+                        <div class="absolute -inset-4 md:-inset-8 border border-tertiary-fixed-dim/20 rounded-lg transform rotate-2 transition-transform duration-1000 group-hover:rotate-0 group-hover:scale-[1.02] pointer-events-none"></div>
+                        
+                        <!-- Main Image Container mimicking a classy frame -->
+                        <div class="relative bg-surface p-3 md:p-5 shadow-2xl rounded-sm transform transition-all duration-700 hover:-translate-y-2 border border-outline-variant/20">
+                            <img src="images/save-the-date-raives.png" class="w-full h-auto rounded-sm object-cover" alt="Save the date" />
+                            
+                            <!-- Subtle overlay -->
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500 rounded-sm pointer-events-none"></div>
+                        </div>
+                        
+                        <!-- Floating decorative star -->
+                        <div class="absolute -bottom-6 -right-6 md:-bottom-12 md:-right-12 w-16 h-16 md:w-24 md:h-24 text-tertiary-fixed-dim opacity-40">
+                            <svg viewBox="0 0 100 100" class="w-full h-full animate-spin-slow">
+                                <path fill="currentColor" d="M50 0 L55 45 L100 50 L55 55 L50 100 L45 55 L0 50 L45 45 Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Countdown Section -->
+                <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low relative flex flex-col items-center border-t border-outline-variant/20">
+                    <div class="text-center max-w-2xl mx-auto mb-16">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-4">Notre nouveau chapitre commence dans...</h3>
+                        <div class="h-px w-16 bg-secondary/30 mx-auto"></div>
+                    </div>
+                    <div id="countdown-container" class="flex flex-wrap justify-center gap-4 md:gap-8 w-full max-w-4xl">
+                        <!-- Days -->
+                        <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 100ms;">
+                            <span id="cd-days" class="font-display-lg text-display-lg text-primary relative z-10">420</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Jours</span>
+                        </div>
+                        <!-- Hours -->
+                        <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 200ms;">
+                            <span id="cd-hours" class="font-display-lg text-display-lg text-primary relative z-10">14</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Heures</span>
+                        </div>
+                        <!-- Minutes -->
+                        <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 300ms;">
+                            <span id="cd-minutes" class="font-display-lg text-display-lg text-primary relative z-10">35</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Minutes</span>
+                        </div>
+                        <!-- Seconds -->
+                        <div class="countdown-item opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col items-center bg-surface border border-outline-variant/30 p-6 md:p-8 min-w-[100px] md:min-w-[140px] shadow-sm relative overflow-hidden group" style="transition-delay: 400ms;">
+                            <span id="cd-seconds" class="font-display-lg text-display-lg text-primary relative z-10">09</span>
+                            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2 relative z-10">Secondes</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SECTION: STORY -->
+            <div id="story" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full border-t border-outline-variant/20 section-spy">
+                <section class="text-center mb-section-gap relative z-10 reveal-element">
+                    <p class="font-label-caps text-label-caps text-secondary mb-6 tracking-widest uppercase">Là où tout a commencé</p>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 max-w-3xl mx-auto">
+                        Il était une fois deux prénoms...<br/>
+                        <span class="font-accent-calligraphy text-secondary text-5xl md:text-7xl block mt-4">Raïssa et Yves deviennent RAÏVES.</span>
+                    </h1>
+                    <div class="w-px h-24 bg-outline-variant/50 mx-auto mt-12"></div>
+                </section>
+
+                <div class="space-y-section-gap">
+                    <!-- Chapter 1 -->
+                    <section class="relative grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-center my-16 md:my-24">
+                        <div class="md:col-span-5 md:col-start-2 order-2 md:order-1 relative z-10 reveal-element delay-200">
+                            <span class="font-label-caps text-label-caps text-secondary mb-4 block">Chapitre I</span>
+                            <h2 class="font-headline-md text-headline-md text-primary mb-6">La rencontre</h2>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Dans la douce lumière d'un après-midi d'été, le hasard a orchestré une rencontre inoubliable...</p>
+                        </div>
+                        <div class="md:col-span-5 order-1 md:order-2 mb-8 md:mb-0 relative reveal-element">
+                            <div class="aspect-[4/5] bg-surface-container overflow-hidden rounded-sm border border-outline-variant/30 p-4 md:p-6 transform rotate-2 shadow-sm transition-transform duration-500 hover:rotate-0 bg-white/50">
+                                <img src="images/img_20260707_wa0004.jpg.jpeg.png" alt="La Rencontre" class="w-full h-full object-cover rounded-sm"/>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Chapter 2 -->
+                    <section class="relative grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24 items-center my-16 md:my-24">
+                        <div class="md:col-span-5 md:col-start-2 mb-8 md:mb-0 relative reveal-element">
+                            <div class="aspect-[4/5] bg-surface-container overflow-hidden rounded-sm border border-outline-variant/30 p-4 md:p-6 transform -rotate-1 shadow-sm transition-transform duration-500 hover:rotate-0 bg-white/50">
+                                <img src="images/img_20260707_wa0005.jpg.jpeg.png" alt="Premier rendez-vous" class="w-full h-full object-cover rounded-sm"/>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 relative z-10 reveal-element delay-200">
+                            <span class="font-label-caps text-label-caps text-secondary mb-4 block">Chapitre II</span>
+                            <h2 class="font-headline-md text-headline-md text-primary mb-6">Le premier rendez-vous</h2>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Une table isolée, la lueur vacillante des bougies, et des conversations qui s'étirent jusqu'au bout de la nuit...</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- SECTION: BIG DAY -->
+            <div id="bigday" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-high border-t border-outline-variant/20 w-full section-spy">
+                <section class="text-center mb-24 reveal-element">
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Le grand jour</h1>
+                    <p class="font-accent-calligraphy text-accent-calligraphy text-secondary italic">Vendredi 21 août 2026</p>
+                </section>
+                
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 max-w-container-max mx-auto reveal-element delay-200">
+                    <div class="bg-surface border border-outline-variant/30 rounded-xl p-8 flex flex-col items-center text-center shadow-sm">
+                        <span class="material-symbols-outlined text-3xl text-secondary mb-6">schedule</span>
+                        <h3 class="font-headline-md text-primary mb-4 text-xl">L'Heure</h3>
+                        <p class="font-body-lg text-on-surface-variant pb-2 inline-block">15:00</p>
+                    </div>
+                    <div class="bg-surface border border-outline-variant/30 rounded-xl p-8 flex flex-col items-center text-center shadow-sm md:-translate-y-4">
+                        <span class="material-symbols-outlined text-3xl text-secondary mb-6">account_balance</span>
+                        <h3 class="font-headline-md text-primary mb-4 text-xl">Le Domaine</h3>
+                        <p class="font-body-lg text-on-surface-variant pb-2 inline-block">Château de Rêve</p>
+                    </div>
+                    <div class="bg-surface border border-outline-variant/30 rounded-xl p-8 flex flex-col items-center text-center shadow-sm">
+                        <span class="material-symbols-outlined text-3xl text-secondary mb-6">map</span>
+                        <h3 class="font-headline-md text-primary mb-4 text-xl">L'Adresse</h3>
+                        <p class="font-body-lg text-on-surface-variant pb-2 inline-block">123 Allée de l'Amour</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SECTION: TIMELINE -->
+            <div id="timeline" class="pt-24 pb-section-gap px-2 md:px-margin-desktop bg-surface w-full border-t border-outline-variant/20 section-spy overflow-hidden">
+                <section class="text-center mb-12 md:mb-24 reveal-element">
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4 md:mb-6">Le Programme</h1>
+                    <p class="font-accent-calligraphy text-accent-calligraphy text-secondary italic">Déroulement de la journée</p>
+                </section>
+
+                <div class="max-w-4xl mx-auto relative reveal-element delay-200 py-4 md:py-12 w-full">
+                    <!-- Vertical Golden Trunk (Centered always) -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#c09d55]/20 via-[#c09d55] to-[#c09d55]/10 rounded-full"></div>
+                    
+                    <div class="space-y-12 w-full">
+                        <!-- Timeline Item 1 -->
+                        <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
+                            <div class="w-[45%] text-right pr-4 md:pr-8">
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Célébration civile</h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">L'union officielle entourée de nos proches.</p>
+                            </div>
+                            
+                            <!-- Golden Node -->
+                            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 md:w-10 md:h-10 rounded-full bg-surface border-[2px] md:border-[3px] border-[#c09d55] z-10 shadow-[0_0_10px_rgba(192,157,85,0.4)] group-hover:scale-110 transition-transform">
+                                <div class="w-1.5 h-1.5 md:w-3 md:h-3 bg-[#c09d55] rounded-full"></div>
+                            </div>
+                            
+                            <!-- Golden Branch (Right) -->
+                            <div class="absolute left-1/2 top-1/2 w-[15%] md:w-[5%] h-[1px] md:h-[2px] bg-gradient-to-r from-[#c09d55] to-transparent transform -translate-y-1/2"></div>
+                            
+                            <div class="w-[45%] text-left pl-4 md:pl-12 flex items-center justify-start">
+                                <span class="font-display-lg-mobile md:font-display-lg text-[#c09d55] drop-shadow-sm text-xl md:text-5xl">12:00</span>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
+                            <div class="w-[45%] text-right pr-4 md:pr-12 flex items-center justify-end">
+                                <span class="font-display-lg-mobile md:font-display-lg text-[#c09d55] drop-shadow-sm text-xl md:text-5xl">13:30</span>
+                            </div>
+                            
+                            <!-- Golden Node -->
+                            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 md:w-10 md:h-10 rounded-full bg-surface border-[2px] md:border-[3px] border-[#c09d55] z-10 shadow-[0_0_10px_rgba(192,157,85,0.4)] group-hover:scale-110 transition-transform">
+                                <div class="w-1.5 h-1.5 md:w-3 md:h-3 bg-[#c09d55] rounded-full"></div>
+                            </div>
+                            
+                            <!-- Golden Branch (Left) -->
+                            <div class="absolute right-1/2 top-1/2 w-[15%] md:w-[5%] h-[1px] md:h-[2px] bg-gradient-to-l from-[#c09d55] to-transparent transform -translate-y-1/2"></div>
+                            
+                            <div class="w-[45%] text-left pl-4 md:pl-8">
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Séance photo</h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Immortalisons ces moments inoubliables avec vous.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
+                            <div class="w-[45%] text-right pr-4 md:pr-8">
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Cocktail</h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Rafraîchissements et bouchées délicates au soleil.</p>
+                            </div>
+                            
+                            <!-- Golden Node -->
+                            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 md:w-10 md:h-10 rounded-full bg-surface border-[2px] md:border-[3px] border-[#c09d55] z-10 shadow-[0_0_10px_rgba(192,157,85,0.4)] group-hover:scale-110 transition-transform">
+                                <div class="w-1.5 h-1.5 md:w-3 md:h-3 bg-[#c09d55] rounded-full"></div>
+                            </div>
+                            
+                            <!-- Golden Branch (Right) -->
+                            <div class="absolute left-1/2 top-1/2 w-[15%] md:w-[5%] h-[1px] md:h-[2px] bg-gradient-to-r from-[#c09d55] to-transparent transform -translate-y-1/2"></div>
+                            
+                            <div class="w-[45%] text-left pl-4 md:pl-12 flex items-center justify-start">
+                                <span class="font-display-lg-mobile md:font-display-lg text-[#c09d55] drop-shadow-sm text-xl md:text-5xl">14:15</span>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 4 -->
+                        <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
+                            <div class="w-[45%] text-right pr-4 md:pr-12 flex items-center justify-end">
+                                <span class="font-display-lg-mobile md:font-display-lg text-[#c09d55] drop-shadow-sm text-xl md:text-5xl">15:00</span>
+                            </div>
+                            
+                            <!-- Golden Node -->
+                            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 md:w-10 md:h-10 rounded-full bg-surface border-[2px] md:border-[3px] border-[#c09d55] z-10 shadow-[0_0_10px_rgba(192,157,85,0.4)] group-hover:scale-110 transition-transform">
+                                <div class="w-1.5 h-1.5 md:w-3 md:h-3 bg-[#c09d55] rounded-full"></div>
+                            </div>
+                            
+                            <!-- Golden Branch (Left) -->
+                            <div class="absolute right-1/2 top-1/2 w-[15%] md:w-[5%] h-[1px] md:h-[2px] bg-gradient-to-l from-[#c09d55] to-transparent transform -translate-y-1/2"></div>
+                            
+                            <div class="w-[45%] text-left pl-4 md:pl-8">
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Réception</h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Le début des festivités et du banquet luxueux.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 5 -->
+                        <div class="relative flex flex-row items-center justify-between group h-32 md:h-40 w-full">
+                            <div class="w-[45%] text-right pr-4 md:pr-8">
+                                <h3 class="font-headline-md text-primary mb-1 text-lg md:text-3xl leading-tight">Piste libre</h3>
+                                <p class="font-body-sm md:font-body-lg text-on-surface-variant hidden md:block">Musique, danse et célébration jusqu'au bout de la nuit.</p>
+                            </div>
+                            
+                            <!-- Golden Node -->
+                            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 md:w-10 md:h-10 rounded-full bg-surface border-[2px] md:border-[3px] border-[#c09d55] z-10 shadow-[0_0_10px_rgba(192,157,85,0.4)] group-hover:scale-110 transition-transform">
+                                <div class="w-1.5 h-1.5 md:w-3 md:h-3 bg-[#c09d55] rounded-full"></div>
+                            </div>
+                            
+                            <!-- Golden Branch (Right) -->
+                            <div class="absolute left-1/2 top-1/2 w-[15%] md:w-[5%] h-[1px] md:h-[2px] bg-gradient-to-r from-[#c09d55] to-transparent transform -translate-y-1/2"></div>
+                            
+                            <div class="w-[45%] text-left pl-4 md:pl-12 flex items-center justify-start">
+                                <span class="font-display-lg-mobile md:font-display-lg text-[#c09d55] drop-shadow-sm text-xl md:text-5xl">19:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: DRESS CODE (Wedding Planner) -->
+            <div id="dresscode" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-high border-t border-outline-variant/20 w-full section-spy overflow-hidden">
+                <section class="text-center mb-16 reveal-element">
+                    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block">Dress Code Officiel</span>
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Conseil de Manuella, la Wedding Planner</h1>
+                    <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Une harmonie entre l'élégance naturelle d'un domaine viticole et la fraîcheur raffinée d'un jardin tropical. Privilégiez les teintes profondes (vert forêt, bordeaux, terracotta, beige sable) et les matières nobles.
+                    </p>
+                </section>
+                
+                <!-- Dress Code Editorial Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-container-max mx-auto">
+                    
+                    <div class="flex flex-col gap-6 reveal-element delay-100">
+                        <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20">
+                            <img src="images/dresscode_duo_greenburgundy_1784589007214.png" alt="Duo Elegance" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="font-label-caps text-primary tracking-widest">Inspiration Duo</p>
+                            </div>
+                        </div>
+                        <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 aspect-square">
+                            <img src="images/dresscode_women_burgundy_1784588985062.png" alt="Women Elegance" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="font-label-caps text-primary tracking-widest">Silhouette Féminine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-6 reveal-element delay-200 lg:-translate-y-8">
+                        <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 aspect-[3/4]">
+                            <img src="images/dresscode_men_green_1784588970382.png" alt="Men Elegance" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="font-label-caps text-primary tracking-widest">Silhouette Masculine</p>
+                            </div>
+                        </div>
+                        <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 h-48">
+                            <img src="images/dresscode_details_1784589015729.png" alt="Details and Fabrics" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="font-label-caps text-primary tracking-widest">Détails & Matières</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-6 reveal-element delay-300 md:col-span-2 lg:col-span-1">
+                        <div class="relative group overflow-hidden rounded-md shadow-md border border-outline-variant/20 h-full min-h-[400px]">
+                            <img src="images/dresscode_duo_sandsage_1784588993497.png" alt="Duo Elegance Alternative" class="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="font-label-caps text-primary tracking-widest">Harmonie des Couleurs</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- SECTION: GALLERY -->
+            <div id="gallery" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full border-t border-outline-variant/20 section-spy">
+                <section class="text-center mb-16 reveal-element">
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-4">Notre Galerie</h1>
+                    <p class="font-body-lg text-on-surface-variant">Quelques instants figés dans le temps...</p>
+                </section>
+
+                <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-[250px]">
+                    <div class="reveal-element delay-100 relative group overflow-hidden rounded-xl shadow-sm md:col-span-2 md:row-span-2">
+                        <img src="images/photo-demande-mariage.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="La demande"/>
+                        <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="font-accent-calligraphy text-surface text-2xl drop-shadow-md">La demande en mariage</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal-element delay-200 relative group overflow-hidden rounded-xl shadow-sm">
+                        <img src="images/img_20260707_wa0006.jpg.jpeg.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Moment 1"/>
+                        <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="font-accent-calligraphy text-surface text-xl drop-shadow-md">Complices</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal-element delay-300 relative group overflow-hidden rounded-xl shadow-sm">
+                        <img src="images/img_20260707_wa0005.jpg.jpeg.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Moment 2"/>
+                        <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="font-accent-calligraphy text-surface text-xl drop-shadow-md">Sourires</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal-element delay-400 relative group overflow-hidden rounded-xl shadow-sm md:col-span-3 h-[400px]">
+                        <img src="images/mpp_1315.jpg.jpeg.png" class="w-full h-full object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-110" alt="Moment 3"/>
+                        <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="font-accent-calligraphy text-surface text-2xl drop-shadow-md">L'élégance</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SECTION: RSVP -->
+            <div id="rsvp-section" class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop bg-surface w-full flex flex-col items-center border-t border-outline-variant/20 section-spy">
+                <div id="form-container" class="w-full max-w-2xl transition-opacity duration-500 reveal-element">
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary text-center mb-4">RSVP</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant text-center mb-12">Veuillez confirmer votre présence pour célébrer ce moment avec nous.</p>
+                    
+                    <form id="rsvp-form" class="w-full glass-card p-8 md:p-12 shadow-sm rounded-DEFAULT flex flex-col gap-6 relative overflow-hidden bg-surface-container">
+                        <div id="sending-overlay" class="absolute inset-0 bg-surface/80 backdrop-blur-sm z-20 flex flex-col items-center justify-center hidden opacity-0 transition-opacity duration-300">
+                            <svg class="w-16 h-16 text-primary animate-spin-slow" fill="none" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="currentColor" stroke-dasharray="70 200" stroke-width="2"></circle><path d="M50 10 C55 25, 70 35, 80 50" fill="none" stroke="currentColor" stroke-width="1"></path></svg>
+                            <p class="font-accent-calligraphy text-accent-calligraphy text-primary mt-6 italic">Envoi de votre réponse...</p>
+                        </div>
+                        <div id="error-overlay" class="absolute inset-0 bg-error-container/95 backdrop-blur-md z-30 flex flex-col items-center justify-center p-8 text-center hidden opacity-0 transition-opacity duration-300">
+                            <span class="material-symbols-outlined text-4xl text-on-error-container mb-4">error</span>
+                            <p class="font-body-lg text-body-lg text-on-error-container mb-6">Une erreur est survenue.</p>
+                            <button type="button" id="retry-btn" class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 hover:bg-surface-tint transition-colors duration-300">Réessayer</button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label for="nom" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Nom Complet</label>
+                                <input type="text" id="nom" name="nom" required class="form-input-elegant" placeholder="Votre nom"/>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="telephone" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone" class="form-input-elegant" placeholder="+33 6 00 00 00 00"/>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="email" class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">E-mail</label>
+                            <input type="email" id="email" name="email" required class="form-input-elegant" placeholder="votre@email.com"/>
+                        </div>
+                        <button type="submit" id="submit-btn" class="mt-8 bg-primary text-on-primary font-label-caps text-label-caps py-4 px-8 w-full md:w-auto self-center hover:bg-surface-tint transition-colors duration-300">
+                            Confirmer ma présence
+                        </button>
+                    </form>
+                </div>
+                
+                <section id="success-section" class="w-full max-w-4xl mx-auto flex flex-col items-center text-center hidden opacity-0 transition-opacity duration-1000 mt-12">
+                    <div class="monogram-wrapper mb-12 relative w-64 h-64 flex items-center justify-center success-element delay-100">
+                        <div class="glimmer"></div><div class="glimmer"></div><div class="glimmer"></div><div class="glimmer"></div>
+                        <img src="images/monogram.jpeg.png" alt="RAÏVES Monogram" class="w-full h-full object-contain absolute inset-0 z-10 mix-blend-multiply"/>
+                        <svg class="absolute inset-0 w-full h-full text-tertiary-fixed-dim z-0" viewBox="0 0 100 100"><circle class="vine-circle" cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.5"></circle></svg>
+                    </div>
+                    <h2 class="font-accent-calligraphy text-accent-calligraphy md:text-headline-md text-primary mb-6 italic max-w-xl leading-relaxed success-element delay-500">
+                        "Certains moments sont précieux... Merci de faire partie de notre histoire."
+                    </h2>
+                    <p class="font-headline-md text-body-lg text-secondary mb-16 success-element delay-700">Avec amour, Raïssa & Yves</p>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="w-full py-16 px-margin-desktop flex flex-col items-center gap-2 bg-surface-container-highest border-t border-outline-variant/20 mt-auto z-10 relative">
+                <h4 class="font-accent-calligraphy text-headline-md text-secondary mb-4">RAÏVES</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant text-center opacity-80 mb-6">© 2026 RAÏVES. Signature of Elegance.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
